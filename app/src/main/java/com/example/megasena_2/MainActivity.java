@@ -55,15 +55,5 @@ public class MainActivity extends AppCompatActivity {
 
         // Adiciona os números ao banco de dados SQLite
         numeros.inserirNoBancoDeDados(getApplicationContext());
-
-        /////TESTE GIT
-        /////TESTE GIT
-
-        /////TESTE GIT
-
-        /////TESTE GIT
-
-        /////TESTE GIT
-
     }
 }
