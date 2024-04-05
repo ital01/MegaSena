@@ -70,7 +70,7 @@ public class Numeros {
             db.insert("numeros_megasena", null, values);
 
             // Mostra um feedback ao usuário
-            Toast.makeText(context, "Números adicionados ao banco de dados com sucesso!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Números adicionados ao banco de dados", Toast.LENGTH_SHORT).show();
         } catch (SQLiteException e) {
             e.printStackTrace();
             Toast.makeText(context, "Erro ao adicionar números ao banco de dados: " + e.getMessage(), Toast.LENGTH_SHORT).show();
