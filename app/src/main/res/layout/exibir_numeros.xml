@@ -34,7 +34,8 @@
                 android:layout_marginBottom="16dp" />
 
             <Button
-                android:id="@+id/returnMain"
+                android:id="@+id/voltar"
+                android:onClick="returnMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
