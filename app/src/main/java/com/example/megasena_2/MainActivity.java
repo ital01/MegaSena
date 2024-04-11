@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.graphics.Insets;
 import androidx.activity.EdgeToEdge;
 import androidx.core.view.WindowInsetsCompat;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,4 +57,10 @@ public class MainActivity extends AppCompatActivity {
         // Adiciona os números ao banco de dados SQLite
         numeros.inserirNoBancoDeDados(getApplicationContext());
     }
+    public void exibirNumerosLayout(View view) {
+        // Use um Intent para abrir o novo layout
+        Intent intent = new Intent(this, ExibirNumerosActivity.class);
+        startActivity(intent);
+    }
+
 }
