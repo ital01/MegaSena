@@ -1,4 +1,4 @@
-package com.example.megasena_2;
+package com.example.megasena;
 
 import org.junit.Test;
 

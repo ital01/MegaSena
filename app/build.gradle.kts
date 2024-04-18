@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.megasena_2"
+    namespace = "com.example.megasena"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.megasena_2"
+        applicationId = "com.example.megasena"
         minSdk = 34
         targetSdk = 34
         versionCode = 1
