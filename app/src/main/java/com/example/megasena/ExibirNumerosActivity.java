@@ -33,12 +33,20 @@ public class ExibirNumerosActivity extends AppCompatActivity {
             int sorteioID = i + 1; // Adiciona 1 porque os IDs de sorteio geralmente começam em 1
             Numeros numeros = numerosList.get(i);
 
-            // Formata a string com os números do sorteio
-            numerosString.append("Sorteio ").append(String.format(Locale.getDefault(), "%3d", sorteioID)).append(": ")
-                    .append(String.format(Locale.getDefault(), "%3d - %3d - %3d - %3d - %3d - %3d",
-                            numeros.getN1(), numeros.getN2(), numeros.getN3(),
-                            numeros.getN4(), numeros.getN5(), numeros.getN6()))
-                    .append("\n\n");
+            // Formatação do ID do sorteio
+            String sorteioIDFormatado = String.format(Locale.getDefault(), "%3d", sorteioID);
+
+            // Formatação dos números do sorteio
+            String numerosFormatados = String.format(Locale.getDefault(),
+                    "%2d - %2d - %2d - %2d - %2d - %2d",
+                    numeros.getN1(), numeros.getN2(), numeros.getN3(),
+                    numeros.getN4(), numeros.getN5(), numeros.getN6());
+
+            // Construção da string completa do sorteio
+            String sorteioString = String.format(" " + " Sorteio %s : %s\n\n", sorteioIDFormatado, numerosFormatados);
+
+            // Adiciona a string do sorteio à string geral
+            numerosString.append(sorteioString);
         }
 
         // Define o texto do TextView com os números formatados

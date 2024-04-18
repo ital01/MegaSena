@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                             // Habilita o botão novamente após 1 segundo
                             isButtonClickable = true;
                         }
-                    }, 1000); // 1000 ms = 1 segundo
+                    }, 500); //Milissigundos de delay para gerar novamente
                 }
             }
         });
