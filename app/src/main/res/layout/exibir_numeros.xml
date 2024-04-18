@@ -31,14 +31,11 @@
 
             <TextView
                 android:id="@+id/textViewNumeros"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:background="#CC000000"
-                android:textColor="@color/white"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="16dp" />
-
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/voltar"

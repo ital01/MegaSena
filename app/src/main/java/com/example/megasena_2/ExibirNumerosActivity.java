@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
-
+import java.util.Locale;
 public class ExibirNumerosActivity extends AppCompatActivity {
 
     @Override
@@ -32,14 +32,13 @@ public class ExibirNumerosActivity extends AppCompatActivity {
             int sorteioID = i + 1; // Adiciona 1 porque os IDs de sorteio geralmente começam em 1
             Numeros numeros = numerosList.get(i);
 
-            numerosString.append(" ").append(" ").append("Sorteio ").append(sorteioID).append(": ").append("  ")
-                    .append(numeros.getN1()).append(" ").append("-").append(" ")
-                    .append(numeros.getN2()).append(" ").append("-").append(" ")
-                    .append(numeros.getN3()).append(" ").append("-").append(" ")
-                    .append(numeros.getN4()).append(" ").append("-").append(" ")
-                    .append(numeros.getN5()).append(" ").append("-").append(" ")
-                    .append(numeros.getN6()).append(" ").append("\n\n");
+            numerosString.append(" ").append(String.format(Locale.getDefault(), "Sorteio %3d: ", sorteioID))
+                    .append(String.format(Locale.getDefault(), "%3d - %3d - %3d - %3d - %3d - %3d",
+                            numeros.getN1(), numeros.getN2(), numeros.getN3(),
+                            numeros.getN4(), numeros.getN5(), numeros.getN6()))
+                    .append("\n\n");
         }
+
 
         // Define o texto do TextView com os números recuperados
         textViewNumeros.setText(numerosString.toString());
