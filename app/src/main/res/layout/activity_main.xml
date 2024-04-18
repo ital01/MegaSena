@@ -5,97 +5,65 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_ground_mega_sena2"
+    android:background="@drawable/background2"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView7"
-
-        android:layout_width="94dp"
-        android:layout_height="85dp"
-        android:src="@drawable/ball_mega_sena"
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.334">
-
-    </ImageView>
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ball1"
 
         android:layout_width="94dp"
         android:layout_height="85dp"
-        android:src="@drawable/ball_mega_sena"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.798"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.334">
-
-    </ImageView>
-
-    <ImageView
-        android:id="@+id/imageView4"
-
-        android:layout_width="94dp"
-        android:layout_height="85dp"
-        android:src="@drawable/ball_mega_sena"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.335">
-
-    </ImageView>
-
-    <ImageView
-        android:id="@+id/imageView2"
-
-        android:layout_width="94dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="126dp"
         android:src="@drawable/ball_mega_sena"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.386">
 
     </ImageView>
 
-    <ImageView
-        android:id="@+id/imageView3"
-
-        android:layout_width="94dp"
-        android:layout_height="85dp"
-        android:src="@drawable/ball_mega_sena"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195">
-
-    </ImageView>
-
-    <ImageView
-        android:id="@+id/imageView6"
-
-        android:layout_width="94dp"
-        android:layout_height="85dp"
-        android:src="@drawable/ball_mega_sena"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <TextView
+        android:id="@+id/n1"
+        android:layout_width="39dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/archivo"
+        android:text=""
         android:textAlignment="center"
-        app:layout_constraintHorizontal_bias="0.798"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ball1"
+        app:layout_constraintEnd_toEndOf="@+id/ball1"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="@+id/ball1"
+        app:layout_constraintTop_toTopOf="@+id/ball1"
+        app:layout_constraintVertical_bias="0.355" />
+
+    <ImageView
+        android:id="@+id/ball2"
+
+        android:layout_width="94dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ball_mega_sena"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195">
+        app:layout_constraintVertical_bias="0.386">
 
     </ImageView>
 
@@ -105,73 +73,32 @@
         android:layout_height="40dp"
         android:fontFamily="@font/archivo"
         android:text=""
-        android:textSize="30sp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ball2"
+        app:layout_constraintEnd_toEndOf="@+id/ball2"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/ball2"
+        app:layout_constraintTop_toTopOf="@+id/ball2"
+        app:layout_constraintVertical_bias="0.355" />
 
-    <TextView
-        android:id="@+id/n5"
-        android:layout_width="39dp"
-        android:layout_height="40dp"
-        android:fontFamily="@font/archivo"
-        android:text=""
-        android:textSize="30sp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+    <ImageView
+        android:id="@+id/ball3"
 
-    <TextView
-        android:id="@+id/n6"
-        android:layout_width="39dp"
-        android:layout_height="40dp"
-        android:fontFamily="@font/archivo"
-        android:text=""
-        android:textSize="30sp"
+        android:layout_width="94dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ball_mega_sena"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+        app:layout_constraintVertical_bias="0.386">
 
-    <TextView
-        android:id="@+id/n1"
-        android:layout_width="39dp"
-        android:layout_height="40dp"
-        android:fontFamily="@font/archivo"
-        android:text=""
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208" />
-
-    <TextView
-        android:id="@+id/n4"
-        android:layout_width="39dp"
-        android:layout_height="40dp"
-        android:fontFamily="@font/archivo"
-        android:text=""
-        android:textSize="30sp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+    </ImageView>
 
     <TextView
         android:id="@+id/n3"
@@ -179,14 +106,112 @@
         android:layout_height="40dp"
         android:fontFamily="@font/archivo"
         android:text=""
-        android:textSize="30sp"
         android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ball3"
+        app:layout_constraintEnd_toEndOf="@+id/ball3"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="@+id/ball3"
+        app:layout_constraintTop_toTopOf="@+id/ball3"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <ImageView
+        android:id="@+id/ball4"
+
+        android:layout_width="94dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ball_mega_sena"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
+        app:layout_constraintVertical_bias="0.518">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/n4"
+        android:layout_width="39dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/archivo"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ball4"
+        app:layout_constraintEnd_toEndOf="@+id/ball4"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="@+id/ball4"
+        app:layout_constraintTop_toTopOf="@+id/ball4"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <ImageView
+        android:id="@+id/ball5"
+
+        android:layout_width="94dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ball_mega_sena"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/n5"
+        android:layout_width="39dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/archivo"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ball5"
+        app:layout_constraintEnd_toEndOf="@+id/ball5"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/ball5"
+        app:layout_constraintTop_toTopOf="@+id/ball5"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <ImageView
+        android:id="@+id/ball6"
+
+        android:layout_width="94dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ball_mega_sena"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/n6"
+        android:layout_width="39dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/archivo"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ball6"
+        app:layout_constraintEnd_toEndOf="@+id/ball6"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/ball6"
+        app:layout_constraintTop_toTopOf="@+id/ball6"
+        app:layout_constraintVertical_bias="0.377" />
 
     <Button
         android:id="@+id/button_display"
@@ -198,11 +223,11 @@
         android:text="Sortear Numeros"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_exibir_numeros"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547" />
+        app:layout_constraintTop_toBottomOf="@+id/ball6"
+        app:layout_constraintVertical_bias="0.64" />
 
     <Button
         android:id="@+id/button_exibir_numeros"
@@ -210,12 +235,13 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#FFFFFF"
         android:onClick="exibirNumerosLayout"
-        android:text="Ganhador"
+        android:text="Ver Numeros"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintVertical_bias="0.875" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

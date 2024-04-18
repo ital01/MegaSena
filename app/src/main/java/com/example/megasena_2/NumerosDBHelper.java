@@ -31,14 +31,31 @@ public class NumerosDBHelper extends SQLiteOpenHelper {
         // Atualização do esquema de banco de dados, se necessário
     }
 
+    public void inserirNumeros(int n1, int n2, int n3, int n4, int n5, int n6) {
+        SQLiteDatabase db = getWritableDatabase();
+        try {
+            ContentValues values = new ContentValues();
+            values.put("n1", n1);
+            values.put("n2", n2);
+            values.put("n3", n3);
+            values.put("n4", n4);
+            values.put("n5", n5);
+            values.put("n6", n6);
+            db.insert("numeros_megasena", null, values);
+            Toast.makeText(context, "Números adicionados ao banco de dados", Toast.LENGTH_SHORT).show();
+        } catch (SQLiteException e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Erro ao adicionar números ao banco de dados: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        } finally {
+            db.close();
+        }
+    }
 
     public List<Numeros> recuperarTodosNumeros() {
         List<Numeros> numerosList = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
-
         try {
             Cursor cursor = db.query("numeros_megasena", null, null, null, null, null, null);
-
             if (cursor != null && cursor.moveToFirst()) {
                 do {
                     Numeros numeros = new Numeros();
@@ -58,7 +75,6 @@ public class NumerosDBHelper extends SQLiteOpenHelper {
         } finally {
             db.close();
         }
-
         return numerosList;
     }
 }
