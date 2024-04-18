@@ -31,29 +31,6 @@ public class NumerosDBHelper extends SQLiteOpenHelper {
         // Atualização do esquema de banco de dados, se necessário
     }
 
-    public void inserirNumeros(Numeros numeros) {
-        SQLiteDatabase db = getWritableDatabase();
-
-        try {
-            // Insere os números na tabela
-            ContentValues values = new ContentValues();
-            values.put("n1", numeros.getN1());
-            values.put("n2", numeros.getN2());
-            values.put("n3", numeros.getN3());
-            values.put("n4", numeros.getN4());
-            values.put("n5", numeros.getN5());
-            values.put("n6", numeros.getN6());
-            db.insert("numeros_megasena", null, values);
-
-            // Mostra um feedback ao usuário
-            Toast.makeText(context, "Números adicionados ao banco de dados", Toast.LENGTH_SHORT).show();
-        } catch (SQLiteException e) {
-            e.printStackTrace();
-            Toast.makeText(context, "Erro ao adicionar números ao banco de dados: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-        } finally {
-            db.close();
-        }
-    }
 
     public List<Numeros> recuperarTodosNumeros() {
         List<Numeros> numerosList = new ArrayList<>();

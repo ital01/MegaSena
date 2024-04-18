@@ -23,8 +23,16 @@ public class ExibirNumerosActivity extends AppCompatActivity {
 
         // Constrói uma string com os números recuperados
         StringBuilder numerosString = new StringBuilder();
-        for (Numeros numeros : numerosList) {
-            numerosString.append("Números: ")
+
+        // Obtém o tamanho da lista de números
+        int quantidadeSorteios = numerosList.size();
+
+        // Itera sobre os números e constrói a string
+        for (int i = 0; i < quantidadeSorteios; i++) {
+            int sorteioID = i + 1; // Adiciona 1 porque os IDs de sorteio geralmente começam em 1
+            Numeros numeros = numerosList.get(i);
+
+            numerosString.append("Sorteio ").append(sorteioID).append(": ")
                     .append(numeros.getN1()).append(", ")
                     .append(numeros.getN2()).append(", ")
                     .append(numeros.getN3()).append(", ")
@@ -36,10 +44,4 @@ public class ExibirNumerosActivity extends AppCompatActivity {
         // Define o texto do TextView com os números recuperados
         textViewNumeros.setText(numerosString.toString());
     }
-
-    public void returnMain(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
 }
