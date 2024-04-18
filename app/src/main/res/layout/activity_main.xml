@@ -223,7 +223,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#FFFFFF"
         android:onClick="exibirNumerosLayout"
-        android:text="Ver Numeros"
+        android:text="Ver Sorteios"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
