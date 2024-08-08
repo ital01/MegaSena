@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,12 +30,12 @@ public class NumerosDBHelper extends SQLiteOpenHelper {
     // Comando SQL para criar a tabela
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TABLE_NUMEROS + " (" +
-                    COLUMN_ID + " INTEGER PRIMARY KEY," +
-                    COLUMN_N1 + " INTEGER," +
-                    COLUMN_N2 + " INTEGER," +
-                    COLUMN_N3 + " INTEGER," +
-                    COLUMN_N4 + " INTEGER," +
-                    COLUMN_N5 + " INTEGER," +
+                    COLUMN_ID + " INTEGER PRIMARY KEY, " +
+                    COLUMN_N1 + " INTEGER, " +
+                    COLUMN_N2 + " INTEGER, " +
+                    COLUMN_N3 + " INTEGER, " +
+                    COLUMN_N4 + " INTEGER, " +
+                    COLUMN_N5 + " INTEGER, " +
                     COLUMN_N6 + " INTEGER)";
 
     // Comando SQL para excluir a tabela

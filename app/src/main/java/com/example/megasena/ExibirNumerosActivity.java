@@ -3,6 +3,7 @@ package com.example.megasena;
 import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.List;
 import java.util.Locale;
 
@@ -43,7 +44,7 @@ public class ExibirNumerosActivity extends AppCompatActivity {
                     numeros.getN4(), numeros.getN5(), numeros.getN6());
 
             // Construção da string completa do sorteio
-            String sorteioString = String.format(" " + " Sorteio %s : %s\n\n", sorteioIDFormatado, numerosFormatados);
+            String sorteioString = String.format(" Sorteio %s : %s\n\n", sorteioIDFormatado, numerosFormatados);
 
             // Adiciona a string do sorteio à string geral
             numerosString.append(sorteioString);

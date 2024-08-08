@@ -14,7 +14,6 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
-    private boolean isNumerosVisible = false;
     private NumerosDBHelper dbHelper;
 
     // Handler para lidar com os cliques do botão com um intervalo de tempo
@@ -26,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        // Ajusta o padding para a compatibilidade com os insets da janela
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -43,21 +44,22 @@ public class MainActivity extends AppCompatActivity {
                     // Desabilita o botão temporariamente
                     isButtonClickable = false;
 
-                    // Chama o método para exibir e salvar os números após 1 segundo
+                    // Chama o método para exibir e salvar os números após um delay
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             exibirNumeros();
 
-                            // Habilita o botão novamente após 1 segundo
+                            // Habilita o botão novamente após o delay
                             isButtonClickable = true;
                         }
-                    }, 500); //Milissigundos de delay para gerar novamente
+                    }, 500); // Milissegundos de delay para gerar novamente
                 }
             }
         });
     }
 
+    // Método para gerar, exibir e salvar números
     public void exibirNumeros() {
         TextView n1TextView = findViewById(R.id.n1);
         TextView n2TextView = findViewById(R.id.n2);
@@ -67,14 +69,22 @@ public class MainActivity extends AppCompatActivity {
         TextView n6TextView = findViewById(R.id.n6);
 
         Numeros numeros = new Numeros();
-        numeros.gerarNumeros(n1TextView, n2TextView, n3TextView, n4TextView, n5TextView, n6TextView);
+        numeros.gerarNumeros(
+          n1TextView,
+          n2TextView,
+          n3TextView,
+          n4TextView,
+          n5TextView,
+          n6TextView
+        );
 
+        // Salva os números no banco de dados
         dbHelper.inserirNumeros(numeros);
     }
 
+    // Método para iniciar a atividade que exibe todos os números
     public void exibirNumerosLayout(View view) {
         Intent intent = new Intent(this, ExibirNumerosActivity.class);
         startActivity(intent);
     }
-
 }

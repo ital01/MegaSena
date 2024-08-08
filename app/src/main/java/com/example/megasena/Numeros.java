@@ -20,10 +20,19 @@ public class Numeros {
     }
 
     // Método para gerar e exibir os números
-    public void gerarNumeros(TextView n1TextView, TextView n2TextView, TextView n3TextView, TextView n4TextView, TextView n5TextView, TextView n6TextView) {
-        // Gerar e definir os números aleatórios
+    public void gerarNumeros(
+            TextView n1TextView,
+            TextView n2TextView,
+            TextView n3TextView,
+            TextView n4TextView,
+            TextView n5TextView,
+            TextView n6TextView
+    ) {
+        // Instancia o gerador de números aleatórios
         Random random = new Random();
-        n1 = random.nextInt(60) + 1; // Gerar número aleatório entre 1 e 60
+
+        // Gera números aleatórios entre 1 e 60 para cada variável
+        n1 = random.nextInt(60) + 1;
         n2 = random.nextInt(60) + 1;
         n3 = random.nextInt(60) + 1;
         n4 = random.nextInt(60) + 1;
